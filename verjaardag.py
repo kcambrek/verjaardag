@@ -10,7 +10,7 @@ from io import BytesIO
 from IPython.display import display
 import streamlit as st
 
-st.title("Welkom, dit is de kringverjaardag simulator.")
+st.title("Welkom, dit is de kringverjaardag simulator 2.0 🎂")
 
 if 'key' not in st.session_state:
     st.session_state['key'] = 0
@@ -273,7 +273,7 @@ if st.session_state['key'] == 9:
                    ("Je probeert te ontsnappen via de garage.", "De jarige ziet je naar de garage lopen en vraagt je of dat je wat flessen huismerk frisdrank " \
                     "kunt meenemen. Zodra je terug komt van de garage, vragen verschillende mensen of je wat voor hen kunt inschenken. 'Doe mij maar koffie,' wordt " \
                     "er geroepen. De koffie is op, dus je gaat maar nieuwe zetten. Je krijgt het commentaar dat de thee te lang is getrokken, dus je zet maar nieuwe. " \
-                    "Voor je het weet is de koffie weer op, dus voel je genoodzaakt weer nieuwe te zetten. Er lijkt geen einde komen aan verzoekjes van de gasten; ze lijken "\
+                    "Voor je het weet is de koffie weer op, dus voel je genoodzaakt weer nieuwe te zetten. Er lijkt geen einde te komen aan verzoekjes van de gasten; ze lijken "\
                     "onverzadigbaar. Je loopt de jarige tegemoet en wisselt een blik. In de ogen van de jarige zie je hetzelfde als wat de jarige in jouw ogen ziet: " \
                     "de angst dat je tot het einde van het feest moet blijven."),
                    ("Je spreekt je gevoelens uit over het feest.", "Er valt een doodse stilte en er komt een collectief gevoel van ongemak en herkenning. "\
