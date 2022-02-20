@@ -8,7 +8,6 @@ from PIL import Image
 import requests
 from io import BytesIO
 from IPython.display import display
-from matplotlib.pyplot import imshow
 import streamlit as st
 
 st.title("Welkom, dit is de kringverjaardag simulator.")
@@ -50,7 +49,6 @@ class Event:
             image_placeholder.image(img)
         except:
             st.write("afbeelding niet beschikbaar")
-        #imshow(img)   
         
     def maak_keuze_menu(self, opties):
         opties_dic = {key: optie for key, optie in zip(range(len(opties)), opties)}
@@ -106,11 +104,6 @@ if st.session_state['key'] == 0:
 
     welkom_image = "https://www.simosupport.nl/Media/Images/feestje.jpg"
 
-    #response = requests.get(welkom_image)
-    #img = Image.open(BytesIO(response.content))
-    #display(img)
-    #image_placeholder.image(img)
-
     welkom_bericht = "Jarige: Welkom op mijn feestje! Je bent wel laat, het is al 4 uur."
     
     welkom = Event(welkom_bericht, None, welkom_image)
@@ -135,7 +128,6 @@ if st.session_state['key'] == 1:
 
 
     begroeting.start()
-    #begroeting.optie_check()
 
 ###KADO###
 if st.session_state['key'] == 2:
@@ -162,7 +154,6 @@ if st.session_state['key'] == 2:
 
 
     kado.start()
-    #kado.optie_check()
 
 ###FELICEREN###
 if st.session_state['key'] == 3:
@@ -183,7 +174,6 @@ if st.session_state['key'] == 3:
 
 
     felicitatie.start()
-    #felicitatie.optie_check()
 
     
 ###GEBAK###
@@ -199,7 +189,6 @@ if st.session_state['key'] == 4:
 
 
     gebak.start()
-    #gebak.optie_check()
 
 ###TIENER###
 if st.session_state['key'] == 5:
@@ -218,7 +207,6 @@ if st.session_state['key'] == 5:
     tiener = Event(tiener_bericht, tiener_opties, tiener_image, eenmalig = False, gesprek = True, eind_optie = ("Peace out kiddo.", ""))
 
     tiener.start()
-    #tiener.optie_check()
 
 ###STUDENT###
 if st.session_state['key'] == 6:
@@ -233,7 +221,6 @@ if st.session_state['key'] == 6:
     student = Event(student_bericht, student_opties, student_image, eenmalig = False, gesprek = True, eind_optie = ("Je geeft de hoop in de volgende generaties op.", ""))
 
     student.start()
-    #student.optie_check()
 
 ###GESPREKKEN###
 if st.session_state['key'] == 7:
@@ -252,7 +239,6 @@ if st.session_state['key'] == 7:
     gesprekken = Event(gesprekken_bericht, gesprekken_opties, gesprekken_image, eenmalig = False, eind_optie = ("Een gesprek naast de A50 van Eindhoven richting Veghel op vrijdag om 18:00 is beter te verstaan dan deze woordenbrij.", ""))
 
     gesprekken.start()
-    #gesprekken.optie_check()
 
 ###HAPJES###
 if st.session_state['key'] == 8:
@@ -274,8 +260,6 @@ if st.session_state['key'] == 8:
     hapjes = Event(hapjes_bericht, hapjes_opties, hapjes_image, eenmalig = False, eind_optie = ("Je besluit dat je toch nooit echt een fan bent geweest van de Nederlandse keuken.", ""))
 
     hapjes.start()
-    #hapjes.optie_check()
-
 
 ###EXIT###
 if st.session_state['key'] == 9:
@@ -308,8 +292,6 @@ if st.session_state['key'] == 9:
 
 
     finale.start()
-    #exit.optie_check()
-
     
 if st.session_state['key'] == 10:
     final_images = ["https://www.ctvnews.ca/polopoly_fs/1.4408891.1557076891!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg",
