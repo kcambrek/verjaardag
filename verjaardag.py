@@ -1,13 +1,8 @@
-#@title  Welkom, dit is de kringverjaardag simulator. Druk links op de play knop om het feestje te starten! {display-mode: "form"}
-#@markdown Je kiest keuzes door de getallen te kiezen die voor de keuzes staan, deze in te vullen in het tekstbalkje en vervolgens op "enter" te drukken.
-# This code will be hidden when the notebook is loaded.
-
 from time import sleep
 import random
 from PIL import Image
 import requests
 from io import BytesIO
-from IPython.display import display
 import streamlit as st
 
 st.title("Welkom, dit is de kringverjaardag simulator 2.0 🎂")
